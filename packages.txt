@@ -1,0 +1,5 @@
+RPi.GPIO
+requests
+tweepy
+slackclient
+paho-mqtt
