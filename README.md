@@ -16,8 +16,13 @@ This project is based on the code from [this repository](https://github.com/Shmo
 Refer to  wiring in [this tutorial](https://bigl.es/ds18b20-temperature-sensor-with-python-raspberry-pi/). 
 ### To connect to the solar power supply
 Refer to the the manual from the manufacturer of your solar power supply. It usually involves connecting a solar panel board to a controller and a rechargeable battery pack, and then connect them to one of the power ports on your Pi. [pinout.xyz](pinout.xyz) is a great place to reference the location of the ports.
+
+### To make it service-ready
+You will need a waterproof case. Technically any waterproof enclosure will work, but [this](http://openh.io/rubicon/) would be a wise choice. Drill a hole on the side of the case just big enough for the temperature sensor to come through and seal it with silicone if possible.
+Then you need to solder its connection with the temperature sensor either onto a breadboard or between jumper cables so that it will not come off during service.
 # Setting up the software
 Use [Etcher](https://www.balena.io/etcher/) to flash [Rasbpian](https://www.raspberrypi.org/downloads/raspbian/) (any of these versions will work) onto the Raspberry Pi. Your next step would be to connect it to the network and set up SSH on the Pi. You can then choose to either connect to an HDMI TV and set it up from there, or go the [hardcore way](https://github.com/Shmoopty/rpi-appliance-monitor#step-1-create-the-os). In the end, you need to be able to SSH to the Pi through `ssh pi@{your hostname}` and run the following commands.
+
 ```
 sudo apt-get update
 sudo apt-get upgrade
