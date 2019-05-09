@@ -3,3 +3,4 @@ requests
 tweepy
 slackclient
 paho-mqtt
+w1thermsensor
