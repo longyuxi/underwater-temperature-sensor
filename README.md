@@ -48,3 +48,5 @@ There are just a few more software-side things to do now:
 
 If the temperature sensor is set up properly, you should be able to read the temperature by running
 `sudo python temperature_test.py` and read the temperature from the command window. After you are done setting up everything, run `sudo python temperature.py temperature_settings.ini`. The code will push notification through the means of your choice and will update a webpage with the latest temperature at `{your hostname}`. 
+### Lazy method of installing
+After the repository is fetched via `git clone`, execute `install.sh` by `chmod +x install.sh` followed by `sudo ./install.sh`. This script updates the software on your Pi, installs Apache and installs the necessary Python packages. You still need to manually set the script to autorun on boot and specify your own API keys.

@@ -221,8 +221,9 @@ def heartbeat():
     seconds_started = seconds_started + 1
     current_temperature = temp_sensor.get_temperature()
     logging.debug("HB at {}, temp {}".format(current_time, current_temperature))
+    current_time = strftime("%Y-%m-%d %H:%M:%S", localtime())
     f = open('/var/www/html/index.html', 'w')
-    f.write("<head> <meta http-equiv=\"refresh\" content=\"5\"> <title> Temperature </title> </head> Current temperature is <b> {} </b> C. This page auto refreshes in 5 seconds.".format(current_temperature))
+    f.write("<head> <meta http-equiv=\"refresh\" content=\"5\"> <title> Temperature </title> </head> Current temperature is <b> {} </b> C. Last updated {}. This page auto refreshes in 5 seconds.".format(current_temperature, current_time))
     f.close()
     # global vibrating
     # delta_vibration = last_vibration_time - start_vibration_time
